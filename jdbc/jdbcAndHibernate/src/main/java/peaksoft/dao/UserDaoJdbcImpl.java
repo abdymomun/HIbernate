@@ -1,10 +1,13 @@
 package peaksoft.dao;
 
+import org.hibernate.Session;
 import peaksoft.model.User;
+import peaksoft.util.Util;
 
 import java.util.List;
 
 public class UserDaoJdbcImpl implements UserDao {
+    Session session = Util.getSession().openSession();
 
     public UserDaoJdbcImpl() {
 
